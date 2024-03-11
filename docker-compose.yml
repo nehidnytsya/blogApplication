@@ -1,0 +1,40 @@
+version: "3.7"
+
+services:
+  mariadb:
+    image: mariadb:10.4
+    container_name: blogapp-mariadb
+    working_dir: /app
+    ports:
+      - "8002:3306"
+    networks:
+      - blogapp-network
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=springboot
+    volumes:
+      - .:/app
+      - mariadbdata:/var/lib/mysql
+      - ./mariadb/1-init.sql:/docker-entrypoint-initdb.d/1-init.sql
+      - ./mariadb/etc/my.cnf:/etc/mysql/my.cnf
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: blogapp-phpmyadmin
+    ports:
+      - "8004:80"
+    networks:
+      - blogapp-network
+    depends_on:
+      - mariadb
+    environment:
+      PMA_HOST: mariadb
+
+volumes:
+  mariadbdata:
+
+networks:
+  blogapp-network:
+       
+ 
