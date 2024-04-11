@@ -46,8 +46,8 @@ const SignUp = () => {
   return (
     <div className="inner">
       <div className="outer-container">
-        <div className="left-panel">
-        </div>
+        
+    
         <div className="right-panel">
           <form onSubmit={handleSubmit} className="form">
             <div className="form-wrapper">
