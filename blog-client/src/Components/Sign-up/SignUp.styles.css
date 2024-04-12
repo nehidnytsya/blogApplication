@@ -34,12 +34,12 @@ section{
     border-radius: 0px 30px 30px 0px;
 }
 
-.right-block{
+.right-block-signUp{
 
     width: 450px;
     height: 600px;
     border-radius: 30px 0px 0px 30px;
-    background-image: url("../../assets/zdj1.jpg");
+    background-image: url("../../assets/zdj2.jpg");
     background-size: cover;
 }
 

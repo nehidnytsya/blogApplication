@@ -18,11 +18,6 @@ const SignUp = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const handleNavigation = () => {
-    navigate('/');
-  };
-
-  // Function to handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -47,99 +42,91 @@ const SignUp = () => {
 
   return (
     <section>
-    <div className="head-block">
-      <div className="right-block">
-      </div>
-
-      <div class="left-block">
-        <h1>Sign Up</h1>
-        <h3>Welcome! Please, sign up your account!</h3>
+      <div className="head-block">
+        <div className="right-block-signUp"></div>
+        <div class="left-block">
+          <h1>Sign Up</h1>
+          <h3>Welcome! Please, sign up your account!</h3>
           <form onSubmit={handleSubmit} className="form"> 
             <div className="form-wrapper">
               <label>Name</label>
-              <input
-                className="form-control"
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
+                <input
+                  className="form-control"
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
             </div>
             <div className="form-wrapper">
               <label>Surname</label>
-              <input
-                className="form-control"
-                type="text"
-                name="surname"
-                value={formData.surname}
-                onChange={handleChange}
-                required
-              />
+                <input
+                  className="form-control"
+                  type="text"
+                  name="surname"
+                  value={formData.surname}
+                  onChange={handleChange}
+                  required
+                />
             </div>
             <div className="form-wrapper">
               <label>Pesel</label>
-              <input
-                className="form-control"
-                type="text"
-                name="pesel"
-                value={formData.pesel}
-                onChange={handleChange}
-                required
-              />
+                <input
+                  className="form-control"
+                  type="text"
+                  name="pesel"
+                  value={formData.pesel}
+                  onChange={handleChange}
+                  required
+                />
             </div>
             <div className="form-wrapper">
               <label>Email</label>
-              <input
-                className="form-control"
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
+                <input
+                  className="form-control"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
             </div>
             <div className="form-wrapper">
               <label>Password</label>
-              <input
-                className="form-control"
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-              />
+                <input
+                  className="form-control"
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                />
             </div>
             <div className="form-wrapper">
               <label>Confirm password</label>
-              <input
-                className="form-control"
-                type="password"
-                name="confirmPassword"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                required
-              />
+                <input
+                  className="form-control"
+                  type="password"
+                  name="confirmPassword"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                  required
+                />
             </div>
-            {/* Button for form submission */}
             <div className="button-wrapper">
               <button type="submit" className="btn-register">
-              Register
+                Register
               </button>
-
-              <div className="already-registered">
-               <p>Already have an account? <a href="/signin">Sign in</a></p>
-                       </div>
-
-              {/* Button to navigate Sign in
-              <button className="btn-Login" onClick={handleNavigation}>
-              Login
-              </button> */}
+                <div className="already-registered">
+                  <p>Already have an account? 
+                    <a href="/sign-in">Sign in</a>
+                  </p>
+                </div>
             </div>
           </form>
-       
+        </div>
       </div>
-    </div>
     </section>
   );
 }
