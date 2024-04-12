@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import './SignUp.styles.css';
+
 const SignUp = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -44,14 +46,17 @@ const SignUp = () => {
   };
 
   return (
-    <div className="inner">
-      <div className="outer-container">
-        <div className="left-panel">
-        </div>
-        <div className="right-panel">
-          <form onSubmit={handleSubmit} className="form">
+    <section>
+    <div className="head-block">
+      <div className="right-block">
+      </div>
+
+      <div class="left-block">
+        <h1>Sign Up</h1>
+        <h3>Welcome! Please, sign up your account!</h3>
+          <form onSubmit={handleSubmit} className="form"> 
             <div className="form-wrapper">
-              <label>name</label>
+              <label>Name</label>
               <input
                 className="form-control"
                 type="text"
@@ -62,7 +67,7 @@ const SignUp = () => {
               />
             </div>
             <div className="form-wrapper">
-              <label>surname</label>
+              <label>Surname</label>
               <input
                 className="form-control"
                 type="text"
@@ -73,7 +78,7 @@ const SignUp = () => {
               />
             </div>
             <div className="form-wrapper">
-              <label>pesel</label>
+              <label>Pesel</label>
               <input
                 className="form-control"
                 type="text"
@@ -84,7 +89,7 @@ const SignUp = () => {
               />
             </div>
             <div className="form-wrapper">
-              <label>email</label>
+              <label>Email</label>
               <input
                 className="form-control"
                 type="email"
@@ -95,7 +100,7 @@ const SignUp = () => {
               />
             </div>
             <div className="form-wrapper">
-              <label>password</label>
+              <label>Password</label>
               <input
                 className="form-control"
                 type="password"
@@ -106,7 +111,7 @@ const SignUp = () => {
               />
             </div>
             <div className="form-wrapper">
-              <label>confirm-password</label>
+              <label>Confirm password</label>
               <input
                 className="form-control"
                 type="password"
@@ -118,19 +123,26 @@ const SignUp = () => {
             </div>
             {/* Button for form submission */}
             <div className="button-wrapper">
-              <button type="submit" className="button">
-              register
+              <button type="submit" className="btn-register">
+              Register
               </button>
-              {/* Button to navigate back to home page */}
-              <button className="button" onClick={handleNavigation}>
-              home
-              </button>
+
+              <div className="already-registered">
+               <p>Already have an account? <a href="/signin">Sign in</a></p>
+                       </div>
+
+              {/* Button to navigate Sign in
+              <button className="btn-Login" onClick={handleNavigation}>
+              Login
+              </button> */}
             </div>
           </form>
-        </div>
+       
       </div>
     </div>
+    </section>
   );
 }
+
 
 export default SignUp;

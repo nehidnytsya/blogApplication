@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
+import './SignIn.styles.css';
+
 
 function SignIn() {
   const [formData, setFormData] = useState({
@@ -50,30 +52,31 @@ function SignIn() {
   };
 
   return (
-    <div className="inner">
-    <div className="outer-container">
-      <div className="left-panel">
+    <section>
+    <div className="head-block">
+      <div className="right-block">
       </div>
-      <div className="right-panel">
+
+      <div className="left-block">
+      <h1>Sign In</h1>
+      <h3>Please enter your login and password!</h3>
         <form onSubmit={handleSubmit} className="form">
       <div className="form-wrapper">
-      <label>email</label>
+      <label>Email</label>
         <input
           className="form-control"
           type="email"
           name="email"
-          placeholder="Email"
           value={formData.email}
           onChange={handleChange}
         />
       </div>
       <div className="form-wrapper">
-      <label>password</label>
+      <label>Password</label>
         <input
           className="form-control"
           type="password"
           name="password"
-          placeholder="Password"
           value={formData.password}
           onChange={handleChange}
         />
@@ -82,15 +85,16 @@ function SignIn() {
         <p className="error">login.error</p>
       )}
       <div className="form-group">
-        <button type="submit" className="button">nav.login</button>
-        <button className="button" onClick={handleNavigation}>
-        home
-        </button>
+        <button type="submit" className="btn-login">Sign In</button>
+    
+        <div className="register-now">
+               <p>Not have an account? <a href="/signup">Sign Up</a></p>
+                       </div>
       </div>
       </form>
       </div>
       </div>
-    </div>
+    </section>
     );
 }
 
