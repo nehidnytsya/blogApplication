@@ -1,10 +1,7 @@
 package com.jana.dumanska.blogbackend.controller.globalExceptionHandler;
 
 
-import com.jana.dumanska.blogbackend.customException.ErrorDetails;
-import com.jana.dumanska.blogbackend.customException.UserAccessException;
-import com.jana.dumanska.blogbackend.customException.UserAlreadyExistsException;
-import com.jana.dumanska.blogbackend.customException.UserNotFoundException;
+import com.jana.dumanska.blogbackend.customException.*;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -43,6 +40,12 @@ public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptio
     public final ResponseEntity<ErrorDetails> handleUserAccessException(UserAccessException ex, WebRequest request) {
         ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
         return new ResponseEntity<>(errorDetails, HttpStatus.FORBIDDEN);
+    }
+
+    @ExceptionHandler(PostNotFoundException.class)
+    public final ResponseEntity<ErrorDetails> handleUserException(PostNotFoundException ex, WebRequest request) {
+        ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
+        return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
     }
 
     @Override
