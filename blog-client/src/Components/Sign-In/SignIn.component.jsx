@@ -53,6 +53,7 @@ function SignIn() {
 
   return (
     <section>
+    <a href="/" class="home-link"><h1>Odyssey</h1></a>
     <div className="head-block">
       <div className="right-block">
       </div>
@@ -88,7 +89,7 @@ function SignIn() {
         <button type="submit" className="btn-login">Sign In</button>
     
         <div className="register-now">
-               <p>Not have an account? <a href="/signup">Sign Up</a></p>
+               <p>Not have an account? <a href="/sign-up">Sign Up</a></p>
                        </div>
       </div>
       </form>

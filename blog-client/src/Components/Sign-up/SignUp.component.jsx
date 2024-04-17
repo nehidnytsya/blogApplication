@@ -47,6 +47,7 @@ const SignUp = () => {
 
   return (
     <section>
+    <a href="/" class="home-link"><h1>Odyssey</h1></a>
     <div className="head-block">
       <div className="right-block">
       </div>
@@ -128,7 +129,7 @@ const SignUp = () => {
               </button>
 
               <div className="already-registered">
-               <p>Already have an account? <a href="/signin">Sign in</a></p>
+               <p>Already have an account? <a href="/sign-in">Sign in</a></p>
                        </div>
 
               {/* Button to navigate Sign in

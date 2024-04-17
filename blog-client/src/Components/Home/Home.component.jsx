@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 
+import './home.styles.css';
+
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const [userId, setUserId] = useState('');
@@ -59,20 +61,20 @@ const Home = () => {
     <div>
       <div className="post-list-container">
         <div className="post-list-header">
-          <h1>Post</h1>
+        <a href="/" class="home-link"><h1>Odyssey</h1></a>
           <div>
             {!isLoggedIn && (
               <div>
-                <Link to="/sign-up">register</Link>
-                <Link to="/sign-in">login</Link>
+                <Link to="/sign-up" className="sign-up">Register</Link>
+                <Link to="/sign-in" className="sign-in">Login</Link>
                 <h3>To see posts, please register</h3>
               </div>
             )}
             {isLoggedIn && (
               <div>
-                <span>welcome, {getUserInfo()}!</span>
-                <button onClick={handleLogout}>Logout</button>
-                <button className="button" onClick={handleAddPosts}>Add post</button>
+                <span className="welcome-message">Welcome, {getUserInfo()}!</span>
+                <button className="btn-logout" onClick={handleLogout}>Logout</button>
+                <button className="btn-addpost" onClick={handleAddPosts}>ADD POST</button>
               </div>
             )}
           </div>
@@ -81,13 +83,13 @@ const Home = () => {
         {posts ? (
           <div className="posts-list">
             {posts.map(post => (
-              <div key={post.postId} className="post"> 
-                <h3>{post.content}</h3>
+              <div key={post.postId} className="posts"> 
+                <h3 className="post-content">{post.content}</h3>
               </div>
             ))}
           </div>
         ) : (
-          <p>No posts available</p>
+          <p className="no-posts-message">No posts available</p>
         )}
         </div>
       </div>
