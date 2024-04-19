@@ -9,6 +9,19 @@ body{
     background-color: #4F709C;
 }
 
+.home-link {
+  display: block;
+  position: fixed; 
+  top: 20px;
+  left: 20px;
+  margin: 0;
+  text-decoration: none;
+  }
+
+.home-link h1 {
+    margin: 0; 
+  }
+
 section{
     display: flex;
     justify-content: center;
@@ -53,7 +66,6 @@ h1{
 
 h3{
     color: #B0C4DE;
-    
     margin-bottom: 15px;
 }
 

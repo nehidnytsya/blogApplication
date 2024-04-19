@@ -49,45 +49,47 @@ function SignIn() {
 
   return (
     <section>
-      <div className="head-block">
-        <div className="right-block-sigIn"></div>
-        <div className="left-block">
-          <h1>Sign In</h1>
-          <h3>Please enter your login and password!</h3>
-          <form onSubmit={handleSubmit} className="form">
-            <div className="form-wrapper">
-              <label>Email</label>
-                <input
-                  className="form-control"
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-              </div>
-            <div className="form-wrapper">
-              <label>Password</label>
-                <input
-                  className="form-control"
-                  type="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                />
-            </div>
-              {error && (
-                <p className="error">login.error</p>
-              )}
-              <div className="form-group">
-                <button type="submit" className="btn-login">Sign In</button>
-                <div className="register-now">
-                  <p>Not have an account? 
-                    <a href="/sign-up">Sign Up</a>
-                  </p>
-              </div>
-            </div>
-          </form>
-        </div>
+    <a href="/" class="home-link"><h1>Odyssey</h1></a>
+    <div className="head-block">
+      <div className="right-block">
+      </div>
+
+      <div className="left-block">
+      <h1>Sign In</h1>
+      <h3>Please enter your login and password!</h3>
+        <form onSubmit={handleSubmit} className="form">
+      <div className="form-wrapper">
+      <label>Email</label>
+        <input
+          className="form-control"
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="form-wrapper">
+      <label>Password</label>
+        <input
+          className="form-control"
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+      </div>
+      {error && (
+        <p className="error">login.error</p>
+      )}
+      <div className="form-group">
+        <button type="submit" className="btn-login">Sign In</button>
+    
+        <div className="register-now">
+               <p>Not have an account? <a href="/sign-up">Sign Up</a></p>
+                       </div>
+      </div>
+      </form>
+      </div>
       </div>
     </section>
     );
