@@ -37,7 +37,9 @@ const Addpost = () => {
       if (!response.ok) {
         throw new Error('Failed to add post');
       }
-
+      if (response.ok) {
+        window.location.href = '/'; 
+      }
       const data = await response.json();
       console.log(data);
     } catch (error) {
