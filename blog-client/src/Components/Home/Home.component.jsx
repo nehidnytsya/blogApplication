@@ -50,6 +50,27 @@ const Home = () => {
     fetchPosts();
   }, [userId]);
 
+  const handleDeletePost = async (postId) => {
+    console.log("postId", postId);
+    try {
+      const token = localStorage.getItem('jwtToken');
+      const response = await fetch(`http://localhost:8080/v1/post/${postId}`, {
+        method: "DELETE",
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+      if (response.ok) {
+        setPosts(posts.filter(posts => posts.postId !== postId));
+      } else {
+        console.error('Error deleting post:', postId);
+      }
+    } catch (error) {
+      console.error('Error deleting post:', postId);
+    }
+  }
+
   const handleLogout = () => {
     localStorage.removeItem('jwtToken');
     window.location.href = '/'; 
@@ -83,6 +104,9 @@ const Home = () => {
             {posts.map(post => (
               <div key={post.postId} className="post"> 
                 <h3>{post.content}</h3>
+                {post.postId !== -1 && (
+                  <button onClick={() => handleDeletePost(post.postId)}>Delete</button>
+                )}
               </div>
             ))}
           </div>
