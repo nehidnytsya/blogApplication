@@ -17,10 +17,6 @@ function SignIn() {
     setFormData({ ...formData, [name]: value });
     error && setError(false);
   };
-  
-  const handleNavigation = (e) => {
-    navigate('/');
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
