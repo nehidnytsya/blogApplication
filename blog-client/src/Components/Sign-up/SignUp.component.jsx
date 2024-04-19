@@ -44,9 +44,7 @@ const SignUp = () => {
     <section>
     <a href="/" class="home-link"><h1>Odyssey</h1></a>
     <div className="head-block">
-      <div className="right-block">
-      </div>
-
+      <div className="right-block-signUp"></div>
       <div class="left-block">
         <h1>Sign Up</h1>
         <h3>Welcome! Please, sign up your account!</h3>
