@@ -1,0 +1,101 @@
+.post-list-header {
+    margin-top: 100px; 
+    margin-left: 20px; 
+    padding: 10px; 
+  }
+
+  .sign-up {
+    top: 20px;
+    right: 210px; 
+  }
+
+  .sign-in{
+    top: 20px;
+    right: 70px; 
+  }
+
+  .sign-up, .sign-in {
+    
+    position: fixed;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px 40px #e0d9d9 inset, 0px 0px 25px #153660; 
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #445f83;
+    transition: .15s ease-in-out;
+}
+
+  .sign-up:hover, .sign-in:hover {
+    box-shadow: 0 0 10px 0 #445f83 inset, 0 0 10px 4px #22416a;
+    background-color: #7494be;
+    color: #153660;
+  }
+
+.btn-logout{
+  position: fixed;
+  top: 20px; 
+  right: 70px;
+  background-color: #e0d9d9; 
+  color: #445f83; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 25px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: bold; 
+  transition: transform 0.3s;
+}
+
+.btn-logout:hover {
+  box-shadow: 0 0 10px 0 #445f83 inset, 0 0 10px 4px #22416a;
+  color: #153660;
+}
+  
+.btn-addpost{
+  position: fixed; 
+  top: 160px; 
+  background-color: #e0d9d9; 
+  color: #445f83; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 25px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: bold; 
+  transition: transform 0.3s;
+}
+
+.btn-addpost:hover {
+  box-shadow: 0 0 10px 0 #8997a9 inset, 0 0 10px 4px #22416a;
+  color: #22416a;
+}
+
+.welcome-message {
+  font-size: 26px;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  color: #143154;
+  margin-right: 10px;
+}
+
+.posts{
+  border-radius: 23px; 
+  width: 50%; 
+  margin: 0 auto; 
+  border: 5px solid #4F709C; 
+  padding: 10px;
+  background-color: #f0f0f0; 
+}
+
+.post-content {
+  color: #164c8d;
+  font-family: "Georgia", serif;
+}
+
+
+  

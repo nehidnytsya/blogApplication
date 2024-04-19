@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
 
+import './addpost.styles.css';
+
 const Addpost = () => {
   const [post, setPost] = useState({
     content: '',
@@ -44,18 +46,20 @@ const Addpost = () => {
   };
 
   return (
-    <div>
+    <section>
+    <a href="/" class="home-link"><h1>Odyssey</h1></a>
       <form onSubmit={handleSubmit}>
+      <h2>NEW POST</h2>
         <input
           type="text"
           name="content"
           value={post.content}
           onChange={handleChange}
-          placeholder="Content"
+          placeholder="What's new?"
         />
-        <button type="submit">add post</button>
+        <button type="submit"> POST</button>
       </form>
-    </div>
+      </section>
   );
 };
 

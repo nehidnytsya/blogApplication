@@ -1,0 +1,45 @@
+
+    form {
+    margin-top: 20px; 
+    text-align: center; 
+  }
+  
+  form h2 {
+    margin-bottom: 40px; 
+    color: #153a62;
+    font-family: "Georgia", serif;
+    font-weight: bold;
+  }
+  
+  form input[type="text"] {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 40px; 
+    border-radius: 5px; 
+    border: 1px solid #b7c8db; 
+    font-family: "Georgia", serif;
+  }
+  
+  form button {
+    padding: 10px 20px; 
+    background-color: #b7c8db; 
+    border: none;
+    color: #153a62; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    font-family: "Georgia", serif;
+    font-weight: bold;
+  }
+  
+  form button:hover {
+    background-color: #8fa9c6; 
+  }
+
+  .no-posts-message {
+    text-align: center; 
+    font-family: "Georgia", serif;
+    color: #98171b;
+    font-weight: bold;
+  }
+  
