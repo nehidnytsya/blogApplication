@@ -13,8 +13,8 @@ Użytkownicy mogą założyć konto, tworząc unikalny profil.
 Profil umożliwia użytkownikom zarządzanie swoimi blogami.
 
 Tworzenie Postów:
-Użytkownicy mogą tworzyć nowe posty oraz formatować tekst.
-Interfejs edycji będzie intuicyjny i łatwy w użyciu, umożliwiając użytkownikom wyrażanie swoich myśli w sposób, który najlepiej odpowiada ich potrzebom.
+Użytkownicy mogą tworzyć nowe posty oraz usuwać swoje własne posty w przypadku, gdy chcą je wycofać lub skorygować. 
+
 
 Dostępność:
 Aplikacja będzie dostępna na różnych platformach, w tym na stronie internetowej oraz jako aplikacja mobilna, aby umożliwić użytkownikom dostęp do swoich blogów z dowolnego miejsca i urządzenia.
