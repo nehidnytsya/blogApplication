@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 
 import './home.styles.css';
-import deleteIcon from '../../assets/icon-delete.png';
 
 
 const Home = () => {
