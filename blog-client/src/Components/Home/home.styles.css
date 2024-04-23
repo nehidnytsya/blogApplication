@@ -59,6 +59,7 @@
 .btn-addpost{
   position: fixed; 
   top: 160px; 
+  left: 20px;
   background-color: #e0d9d9; 
   color: #445f83; 
   padding: 10px 20px; 
@@ -90,6 +91,7 @@
   border: 5px solid #4F709C; 
   padding: 10px;
   background-color: #f0f0f0; 
+  
 }
 
 .post-content {
@@ -97,5 +99,18 @@
   font-family: "Georgia", serif;
 }
 
+.btn-delete{
+  width: 35px; 
+  height: 35px; 
+  background-image: url('../../assets/icon-delete.png'); 
+  background-size: cover; 
+  border: none; 
+  cursor: pointer; 
+  margin-left: 660px;
+}
+
+.btn-delete:hover {
+  transform: scale(1.1); 
+}
 
   
