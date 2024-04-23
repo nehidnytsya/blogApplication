@@ -107,6 +107,7 @@ const Home = () => {
           <div className="posts-list">
             {posts.map(post => (
               <div key={post.postId} className="posts"> 
+                <h4>{post.name} {post.surname}</h4>
                 <h3 className="post-content">{post.content}</h3>
                 {post.postId !== -1 && (
                   <button className="btn-delete" button onClick={() => handleDeletePost(post.postId)}></button>

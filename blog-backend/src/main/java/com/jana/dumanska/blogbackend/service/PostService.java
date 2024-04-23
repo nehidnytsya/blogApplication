@@ -37,7 +37,9 @@ public class PostService {
         posts.forEach(post -> {
             partPostResponse.add(new PartPostResponse(
                     post.getUser().getId() == userId ? post.getId() : -1,
-                    post.getContent()
+                    post.getContent(),
+                    post.getUser().getName(),
+                    post.getUser().getSurname()
             ));
         });
         return new ResponseEntity<>(
