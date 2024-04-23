@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 
 import './home.styles.css';
+import deleteIcon from '../../assets/icon-delete.png';
+
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -107,7 +109,7 @@ const Home = () => {
               <div key={post.postId} className="posts"> 
                 <h3 className="post-content">{post.content}</h3>
                 {post.postId !== -1 && (
-                  <button onClick={() => handleDeletePost(post.postId)}>Delete</button>
+                  <button className="btn-delete" button onClick={() => handleDeletePost(post.postId)}></button>
                 )}
               </div>
             ))}
