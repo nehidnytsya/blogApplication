@@ -18,6 +18,9 @@
     border-radius: 5px; 
     border: 1px solid #b7c8db; 
     font-family: "Georgia", serif;
+    resize: vertical;
+    min-height: 60px;
+    height: auto; 
   }
   
   form button {
