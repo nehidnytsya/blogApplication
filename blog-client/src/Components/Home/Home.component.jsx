@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 
 import './home.styles.css';
-import deleteIcon from '../../assets/icon-delete.png';
 
 
 const Home = () => {
@@ -107,7 +106,7 @@ const Home = () => {
           <div className="posts-list">
             {posts.map(post => (
               <div key={post.postId} className="posts"> 
-                <h4>{post.name} {post.surname}</h4>
+                <h4 className="post-surname">{post.name} {post.surname}</h4>
                 <h3 className="post-content">{post.content}</h3>
                 {post.postId !== -1 && (
                   <button className="btn-delete" button onClick={() => handleDeletePost(post.postId)}></button>

@@ -52,7 +52,8 @@ const Addpost = () => {
     <a href="/" class="home-link"><h1>Odyssey</h1></a>
       <form onSubmit={handleSubmit}>
       <h2>NEW POST</h2>
-        <input className='post-input'
+        <textarea
+          className='post-input'
           type="text"
           name="content"
           value={post.content}
