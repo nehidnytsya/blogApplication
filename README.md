@@ -1,4 +1,3 @@
-Autors: Ivanna Obozna, Yana Dumanska
 
 Problem:
 Współczesne życie pełne jest wyzwań i napięć, które mogą prowadzić do stresu, niepokoju oraz uczucia osamotnienia. Ludzie często potrzebują miejsca, gdzie mogą się dzielić swoimi myślami, doświadczeniami i refleksjami na temat życia, aby znaleźć pocieszenie, zrozumienie i wsparcie.
